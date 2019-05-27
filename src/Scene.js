@@ -1,8 +1,11 @@
-import { Component } from "./Component";
-export default class Scene extends Component{
+
+import GameObject from "./GameObject";
+export default class Scene extends GameObject {
     constructor(...entities){
         super();
-        this.entities = entities;
+        entities.forEach((entity) =>{
+            entity.setParent(this);
+        });
     }
 
     move(dt){
@@ -16,16 +19,4 @@ export default class Scene extends Component{
         });
     }
 
-    addEntity(entity){
-        if(entity instanceof Component){
-            this.entities.push(entity);
-        }
-    }
-    removeEntity(entity){
-        let predicament = (element) =>{
-            return element.id === entity.id;
-        }
-        let index = this.entities.findIndex(predicament); //find entity in array
-        this.entities.splice(index,1); //remove the entity
-    }
 }
