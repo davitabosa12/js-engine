@@ -12,6 +12,14 @@ class Graphics{
         return i;
     }
 
+    /**
+     * 
+     * @param {Image} image 
+     */
+    static drawImage(x, y, w, h, image){
+        Engine.ctx.drawImage(image, x, y, w, h)
+    }
+
     
 
     static drawRect(x, y, w, h, color = "white"){

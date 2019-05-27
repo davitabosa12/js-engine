@@ -34,7 +34,17 @@ class Player extends Component{
     }
 }
 
-addEventListener('engineStart', () =>{
-    var fase1 = new Scene(new Player(Engine.canvas.width/2, Engine.canvas.height /2));
-    Engine.setScene(fase1);
+addEventListener('engineStart', (engine) =>{
+    console.log(engine);
+    
 });
+
+window.onload = function(){
+    new Engine().init((engine) =>{
+        console.log("engine start");
+        //var fase1 = new Scene(new Player(Engine.canvas.width/2, Engine.canvas.height /2));
+        //engine.setScene(fase1);
+    });
+    
+    
+}
