@@ -1,4 +1,4 @@
-
+import { Component } from "./Component";
 class HelloMessage extends Component{
     constructor(msg,position, name){
         super(name);
@@ -23,3 +23,5 @@ class HelloBG extends Component{
         Graphics.drawImage(this.position.x, this.position.y, this.size.w, this.size.h, this.image);
     }
 }
+
+export {HelloMessage, HelloBG};

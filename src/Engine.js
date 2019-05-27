@@ -1,3 +1,4 @@
+import { HelloMessage, HelloBG } from "./HelloWorldScene";
 class Engine{
     /**
      * @type HTMLCanvasElement

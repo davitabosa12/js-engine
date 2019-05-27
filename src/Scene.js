@@ -1,4 +1,5 @@
-class Scene extends Component{
+import { Component } from "./Component";
+export default class Scene extends Component{
     constructor(...entities){
         super();
         this.entities = entities;
