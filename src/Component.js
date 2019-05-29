@@ -38,4 +38,10 @@ class Component{
     onDestroy(){
 
     }
+    move(){
+
+    }
+    draw(){
+        
+    }
 }

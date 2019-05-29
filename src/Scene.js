@@ -4,16 +4,17 @@ class Scene extends Component {
         super();
         entities.forEach((entity) =>{
             entity.setParent(this);
+            this.addChild(entity);
         });
     }
 
     move(dt){
-        this.entities.forEach((entity) => {
+        this.children.forEach((entity) => {
             entity.move(dt);
         });
     }
     draw(){
-        this.entities.forEach((entity) =>{
+        this.children.forEach((entity) =>{
             entity.draw();
         });
     }

@@ -22,9 +22,7 @@ class Engine{
     init(callback){
         Engine.canvas = document.getElementById("game_canvas");
         Engine.ctx = Engine.canvas.getContext("2d");
-        var asda = new HelloMessage("Hello World!", {x: Engine.canvas.width/2, y: Engine.canvas.height/2}, "mensagem");
-        Engine.scene = new Scene(new HelloBG("./res/golden-retriever-puppy.jpg", {x: 100, y: 100}, {w: 100, h:100}), asda
-        );
+        Engine.scene = null;
         requestAnimationFrame(this.mainloop.bind(this));
         Graphics.clearScreen();
         //window.addEventListener('keydown', KeyboardInput.onKeyDown);
@@ -49,6 +47,7 @@ class Engine{
         }
         this.delta += timeStamp - this.lastFrameTimeMs;
         this.lastFrameTimeMs = timeStamp;
+        if(Engine.scene === null) return;
         while(this.delta >= this.timeStep){
             Engine.scene.move(this.timeStep);
             this.delta -= this.timeStep;

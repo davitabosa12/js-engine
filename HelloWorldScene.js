@@ -17,6 +17,7 @@ class HelloBG extends Component{
         this.image = Graphics.loadImage(path);
         this.position = position;
         this.size = size
+        
     }
     draw(){
         Graphics.drawImage(this.position.x, this.position.y, this.size.w, this.size.h, this.image);
