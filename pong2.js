@@ -1,6 +1,7 @@
 class Paddle extends Component{
     constructor(x, y, w, h){
         super(x, y, w, h, "Paddle");
+        
     }
 
     move(dt){
@@ -41,6 +42,9 @@ class Ball extends Component{
     onCollision(other){
         if(other instanceof Paddle){
             this.speedX = -this.speedX;
+        } else {
+            this.speedY = -this.speedY;
+            this.speedX = -this.speedX;
         }
     }
 }
@@ -48,7 +52,12 @@ class Ball extends Component{
 new Engine().init(engine =>{
     var myScene = new Scene();
     var paddle = new Paddle(15, 0, 20,150);
-    var ball = new Ball(Engine.canvas.width/2, Engine.canvas.height, 15, 100, 5);
+    var ball = new Ball(Engine.canvas.width/2, Engine.canvas.height, 15, Math.random() * 100, Math.random() * 65);    
+    for(var i = 0; i < 100; i++){
+        myScene.addChild(new Ball(Engine.canvas.width/2, Engine.canvas.height, 15, Math.random() * 100, Math.random() * 65));
+    }
+    
+    
     myScene.addChild(paddle);
     myScene.addChild(ball);
     Engine.scene = myScene;
