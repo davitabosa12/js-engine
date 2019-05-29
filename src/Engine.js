@@ -49,7 +49,7 @@ class Engine{
         this.lastFrameTimeMs = timeStamp;
         if(Engine.scene === null) return;
         while(this.delta >= this.timeStep){
-            Engine.scene.move(this.timeStep);
+            Engine.scene.move(this.timeStep / 100);
             this.delta -= this.timeStep;
         }
         Graphics.clearScreen();

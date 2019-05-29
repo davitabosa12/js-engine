@@ -27,6 +27,11 @@ class Graphics{
         Engine.ctx.fillRect(x, y, w, h);
     }
 
+    static drawRectCenter(x, y, w, h, color = "white"){
+        Engine.ctx.fillStyle = color;
+        Engine.ctx.fillRect(x - w/2, y - h/2, w, h);
+    }
+
     static drawCircle(x, y, radius, color="white"){
         Engine.ctx.fillStyle = color;
         Engine.ctx.beginPath();
