@@ -52,7 +52,7 @@ class Engine{
             Engine.scene.move(this.timeStep);
             this.delta -= this.timeStep;
         }
-        
+        Graphics.clearScreen();
         Engine.scene.draw();
         requestAnimationFrame(this.mainloop.bind(this));
     }

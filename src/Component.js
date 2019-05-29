@@ -1,8 +1,12 @@
 class Component{
 
-    constructor(parent, name = ""){
+    constructor(x, y, w, h, name = "", parent=null){
         this.id = UUID.uuidv4();
         this.name = name;
+        this.x =x;
+        this.y = y
+        this.w = w
+        this.h = h;
         this.children = [];
         this.parent = parent;
     }
@@ -31,6 +35,9 @@ class Component{
 
     getParent(){
         return parent;
+    }
+    onCollision(other){
+        
     }
 
     
