@@ -90,4 +90,3 @@ class KeyboardInput {
 		return KeyboardInput.keys[btn] || false;
 	}
 }
-export {MouseInput, KeyboardInput};

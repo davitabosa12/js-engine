@@ -1,0 +1,26 @@
+{
+  "name": "game-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.32.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davitabosa12/js-engine.git"
+  },
+  "author": "Davi Tabosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davitabosa12/js-engine/issues"
+  },
+  "homepage": "https://github.com/davitabosa12/js-engine#readme"
+}

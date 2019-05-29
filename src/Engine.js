@@ -1,4 +1,3 @@
-import { HelloMessage, HelloBG } from "./HelloWorldScene";
 class Engine{
     /**
      * @type HTMLCanvasElement
@@ -58,25 +57,6 @@ class Engine{
         Engine.scene.draw();
         requestAnimationFrame(this.mainloop.bind(this));
     }
-
-    /*static mainloop(timeStamp){
-        if(timeStamp < Time.lastFrameTimeMs + Time.timeStep){
-            requestAnimationFrame(Engine.mainloop);
-            return;
-        }
-        Time.delta += timeStamp - Time.lastFrameTimeMs;
-        Time.lastFrameTimeMs = timeStamp;
-        while(Time.delta >= Time.timeStep){
-            
-            Engine.scene.move(Time.timeStep / 100);
-            Time.delta -= Time.timeStep;
-        }
-        
-        Engine.scene.draw();
-        requestAnimationFrame(Engine.mainloop);
-    }*/
-
-
 }
 
 

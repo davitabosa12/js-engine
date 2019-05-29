@@ -1,6 +1,5 @@
 
-import GameObject from "./GameObject";
-export default class Scene extends GameObject {
+class Scene extends Component {
     constructor(...entities){
         super();
         entities.forEach((entity) =>{

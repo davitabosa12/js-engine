@@ -1,4 +1,4 @@
-export default class Component{
+class Component{
 
     constructor(parent, name = ""){
         this.id = UUID.uuidv4();
